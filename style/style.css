@@ -1,0 +1,711 @@
+/* =========================
+   HELE WEBSITE
+   ========================= */
+
+body {
+    margin: 0;
+    background-color: #FAF8F5;
+    font-family: Arial, sans-serif;
+    color: #1F2933;
+}
+
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+nav {
+    background-color: #F2EDE7;
+    padding: 25px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+nav a {
+    color: #1F2933;
+    text-decoration: none;
+    font-size: 18px;
+
+    padding-bottom: 6px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: #8A4357;
+}
+
+nav a.active {
+    color: #8A4357;
+    border-bottom: 2px solid #8A4357;
+}
+
+
+/* =========================
+   ALGEMENE TEKST
+   ========================= */
+
+h1,
+h2,
+h3,
+p {
+    color: #1F2933;
+}
+
+p {
+    line-height: 1.6;
+}
+
+
+/* =========================
+   MAIN
+   ========================= */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* =========================================
+   PROJECTEN HEADER
+   ========================================= */
+
+.project-header {
+    margin: 0;
+    padding: 70px 10%;
+
+    background-color: #F4DEDF;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: left;
+}
+
+.project-header-text {
+    max-width: 600px;
+}
+
+.project-label {
+    color: #8A4357;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    margin: 0 0 15px 0;
+}
+
+.project-header h1 {
+    font-size: 52px;
+    margin: 0 0 20px 0;
+}
+
+.project-description {
+    max-width: 550px;
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   PROJECTEN STUDIEJAREN
+   ========================================= */
+
+.project-year {
+    background-color: transparent;
+
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0;
+}
+
+.project-year h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   PROJECT GRID
+   ========================================= */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+
+    /* Zorgt ervoor dat de kaart ernaast
+       niet meegaat wanneer een project opent */
+    align-items: start;
+}
+
+
+/* =========================================
+   PROJECT CARDS
+   ========================================= */
+
+.project-year article {
+    background-color: #FFFFFF;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    min-height: 150px;
+
+    transition: 0.2s;
+}
+
+.project-year article:hover {
+    background-color: #F4DEDF;
+}
+
+
+/* =========================================
+   PROJECT TITEL / SUMMARY
+   ========================================= */
+
+.project-year summary {
+    padding: 25px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    list-style: none;
+}
+
+
+/* H3 binnen de summary */
+
+.project-year summary h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* Standaard pijltje van browser verwijderen */
+
+.project-year summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/* Eigen pijltje */
+
+.project-year summary::after {
+    content: "›";
+
+    font-size: 30px;
+    font-weight: normal;
+
+    margin-left: 15px;
+
+    transition: 0.2s;
+}
+
+
+/* Pijltje draaien wanneer project open is */
+
+.project-year details[open] summary::after {
+    transform: rotate(90deg);
+}
+
+
+/* =========================================
+   PROJECT INHOUD
+   ========================================= */
+
+.project-content {
+    padding: 0 25px 25px 25px;
+}
+
+.project-content p {
+    line-height: 1.6;
+}
+
+.techniques {
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   WHO AM I
+   ========================================= */
+
+.whoami-main {
+    max-width: 900px;
+
+    margin: 0 auto;
+    padding: 70px 30px;
+}
+
+
+/* =========================================
+   WHO AM I INTRO + FOTO
+   ========================================= */
+
+.whoami-header {
+    padding: 0;
+    margin-bottom: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+
+    text-align: left;
+}
+
+.whoami-header-text {
+    flex: 1;
+}
+
+
+/* STUDENT • DEVELOPER • LEARNER */
+
+.whoami-label {
+    color: #8A4357;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    margin: 0 0 15px 0;
+}
+
+
+/* Hiii, ik ben Lola */
+
+.whoami-header h1 {
+    font-size: 55px;
+
+    margin: 0 0 20px 0;
+}
+
+
+/* Introductietekst */
+
+.whoami-intro {
+    max-width: 550px;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   WHO AM I FOTO
+   ========================================= */
+
+.whoami-image {
+    width: 280px;
+
+    flex-shrink: 0;
+}
+
+.whoami-image img {
+    width: 100%;
+    height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+}
+
+
+/* =========================================
+   OVER MIJ
+   ========================================= */
+
+.about-section {
+    background-color: transparent;
+
+    padding: 0;
+    margin-bottom: 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 80px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   WHO AM I INFORMATIEVAK
+   ========================================= */
+
+.about-card {
+    width: 230px;
+
+    background-color: #F4DEDF;
+
+    padding: 25px;
+
+    border-radius: 15px;
+}
+
+.about-card p {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    line-height: 1.5;
+}
+
+.about-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   SCHEIDINGSLIJN
+   ========================================= */
+
+.whoami-main hr {
+    border: none;
+
+    border-top: 1px solid #C9C1BA;
+
+    margin: 60px 0;
+}
+
+
+/* =========================================
+   STUDIE + VAARDIGHEDEN
+   ========================================= */
+
+.study-skills {
+    background-color: transparent;
+
+    padding: 0;
+
+    display: flex;
+
+    gap: 100px;
+}
+
+.study,
+.skills {
+    flex: 1;
+}
+
+.study h2,
+.skills h2 {
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+.study p {
+    line-height: 1.7;
+}
+
+.skills ul {
+    padding-left: 20px;
+
+    line-height: 2;
+}
+
+
+/* =========================================
+   BLOG HEADER
+   ========================================= */
+
+.blog-header {
+    margin: 0;
+    padding: 70px 10%;
+
+    background-color: #F4DEDF;
+
+    text-align: left;
+}
+
+.blog-header-text {
+    max-width: 600px;
+}
+
+.blog-label {
+    color: #8A4357;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    margin: 0 0 15px 0;
+}
+
+.blog-header h1 {
+    font-size: 52px;
+
+    margin: 0 0 20px 0;
+}
+
+.blog-description {
+    max-width: 550px;
+
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   BLOG OVERZICHT
+   ========================================= */
+
+.blog-section {
+    max-width: 900px;
+
+    margin: 60px auto;
+}
+
+.blog-section h2 {
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+.blog-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.blog-card {
+    background-color: #FFFFFF;
+
+    min-height: 180px;
+
+    padding: 25px;
+
+    border-radius: 12px;
+}
+
+.blog-card h3 {
+    font-size: 22px;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background-color: #F2EDE7;
+
+    padding: 25px;
+
+    text-align: center;
+
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+
+    color: #1F2933;
+}
+
+
+/* =========================================
+   TABLET - MAXIMAAL 768PX
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* Projecten */
+
+    .project-header {
+        padding: 50px 30px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Who Am I */
+
+    .whoami-header {
+        gap: 40px;
+    }
+
+    .whoami-image {
+        width: 230px;
+    }
+
+    .whoami-image img {
+        height: 300px;
+    }
+
+    .about-section {
+        gap: 40px;
+    }
+
+    .study-skills {
+        gap: 50px;
+    }
+
+
+    /* Blog */
+
+    .blog-header {
+        padding: 50px 30px;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================
+   MOBIEL - MAXIMAAL 480PX
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    /* Navbar */
+
+    nav {
+        gap: 20px;
+        padding: 20px 10px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+
+    /* Algemene main */
+
+    main {
+        padding: 20px;
+    }
+
+
+    /* Projecten */
+
+    .project-header {
+        padding: 45px 25px;
+
+        display: block;
+    }
+
+    .project-header h1 {
+        font-size: 40px;
+    }
+
+    .project-description {
+        font-size: 16px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-year {
+        margin: 40px auto;
+    }
+
+
+    /* Who Am I */
+
+    .whoami-main {
+        padding: 50px 25px;
+    }
+
+    .whoami-header {
+        display: block;
+
+        margin-bottom: 60px;
+    }
+
+    .whoami-header h1 {
+        font-size: 42px;
+    }
+
+    .whoami-image {
+        width: 100%;
+        max-width: 280px;
+
+        margin-top: 30px;
+    }
+
+    .whoami-image img {
+        height: 350px;
+    }
+
+
+    /* Over mij */
+
+    .about-section {
+        display: block;
+    }
+
+    .about-card {
+        width: auto;
+
+        margin-top: 30px;
+    }
+
+
+    /* Studie en vaardigheden */
+
+    .study-skills {
+        display: block;
+    }
+
+    .study {
+        margin-bottom: 50px;
+    }
+
+
+    /* Blog */
+
+    .blog-header {
+        padding: 45px 25px;
+    }
+
+    .blog-header h1 {
+        font-size: 40px;
+    }
+
+    .blog-description {
+        font-size: 16px;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}

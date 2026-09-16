@@ -1,36 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Who Am I</title>
+    <title>Wie ben ik?</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
 
-    <header>
-        <h1>Wie ben ik?</h1>
-    </header>
+    <!-- navvv -->
 
-    <main>
+    <nav>
+        <a href="blog.html">Blog</a>
+        <a href="whoami.html" class="active">Wie ben ik?</a>
+        <a href="projecten.html">Projecten</a>
+    </nav>
 
-        <section>
-            <h2>Lola Lin</h2>
 
-            <p>
-                Hiii! Mijn naam is Lola Lin.
-                Ik ben 20 jaar oud en studeer ICT aan de Haagse Hogeschool. 
-                Ik komt uit Rotterdam. Mijn hobby's zijn gamen en reizen.
-            </p>
+    <main class="whoami-main">
+
+        <!-- beginstukje/intro -->
+
+        <header class="whoami-header">
+
+            <div class="whoami-header-text">
+
+                <p class="whoami-label">
+                    STUDENT • DEVELOPER • LEARNER
+                </p>
+
+                <h1>Hiii, ik ben Lola</h1>
+
+                <p class="whoami-intro">
+                    Ik ben een tweedejaars HBO-ICT student aan De Haagse Hogeschool.
+                    Ik vind softwareontwikkeling en data interessant.
+                    Ik vind het leuk om nieuwe dingen te leren en steeds meer kennis op te doen.
+                </p>
+
+            </div>
+
+
+            <!-- fototje -->
+
+            <div class="whoami-image">
+                <img src="imgs/mijnfoto.jpeg" alt="Foto van Lola Lin">
+            </div>
+
+        </header>
+
+
+        <!-- over mij -->
+
+        <section class="about-section">
+
+            <div class="about-text">
+
+                <h2>Over mij</h2>
+
+                <p>
+                    Mijn naam is Lola Lin, ik ben 20 jaar oud en kom uit Rotterdam.
+                    In mijn vrije tijd vind ik het leuk om te gamen, bakken en reizen.
+                    Ik vind het vooral leuk om nieuwe plekken te ontdekken en tijd door
+                    te brengen met vrienden en familie.
+                </p>
+
+                <p>
+                    Ik ben een rustig en introvert persoon en vind het belangrijk om goed
+                    met anderen om te gaan. Ik werk graag samen met anderen, maar vind
+                    het ook fijn om zelfstandig bezig te zijn. Als iets mij interesseert,
+                    vind ik het leuk om er meer over te leren en nieuwe dingen uit te proberen.
+                </p>
+
+            </div>
+
+
+            <!-- kopje van info -->
+
+            <aside class="about-card">
+
+                <p>
+                    <strong>Locatie</strong><br>
+                    Rotterdam
+                </p>
+
+                <p>
+                    <strong>Opleiding</strong><br>
+                    HBO-ICT
+                </p>
+
+                <p>
+                    <strong>Richting</strong><br>
+                    Software Engineering
+                </p>
+
+                <p>
+                    <strong>Interesses</strong><br>
+                    Gamen • Bakken • Reizen
+                </p>
+
+            </aside>
+
         </section>
 
-        <section>
-            <h2>Over mij</h2>
 
-            <p>
-                ik ben
-            </p>
+        <hr>
+
+
+        <!-- mn studie en vaardigheden -->
+
+        <section class="study-skills">
+
+            <div class="study">
+
+                <h2>Studie</h2>
+
+                <p>
+                    Ik studeer HBO-ICT aan De Haagse Hogeschool en volg de
+                    richting Software Engineering. Ik heb voor deze studie
+                    gekozen omdat ik graag creatief bezig ben en het leuk vind
+                    om zelf websites en applicaties te ontwikkelen.
+                </p>
+
+                <p>
+                    Tijdens mijn opleiding heb ik ervaring opgedaan met
+                    programmeren, webontwikkeling, softwareontwikkeling,
+                    data en Artificial Intelligence.
+                </p>
+
+            </div>
+
+
+            <div class="skills">
+
+                <h2>Vaardigheden</h2>
+
+                <ul>
+                    <li>Java, Python en C#</li>
+                    <li>HTML, CSS en JavaScript</li>
+                    <li>Softwareontwikkeling</li>
+                    <li>Data en Machine Learning</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Scrum</li>
+                </ul>
+
+            </div>
+
         </section>
 
+    </main>
+
+
+    <!-- footer -->
+
+    <footer>
+        <p>Gemaakt door Lola Lin - 2026</p>
+    </footer>
 
 </body>
+
 </html>
