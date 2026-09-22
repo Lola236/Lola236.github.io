@@ -1,7 +1,4 @@
-/* =========================
-   HELE WEBSITE
-   ========================= */
-
+/* hele site */
 body {
     margin: 0;
     background-color: #FAF8F5;
@@ -10,10 +7,7 @@ body {
 }
 
 
-/* =========================
-   NAVBAR
-   ========================= */
-
+/* navbar */
 nav {
     background-color: #F2EDE7;
     padding: 25px 20px;
@@ -43,9 +37,7 @@ nav a.active {
 }
 
 
-/* =========================
-   ALGEMENE TEKST
-   ========================= */
+/*algemene tekst*/
 
 h1,
 h2,
@@ -59,9 +51,7 @@ p {
 }
 
 
-/* =========================
-   MAIN
-   ========================= */
+/*main*/
 
 main {
     max-width: 1100px;
@@ -70,9 +60,7 @@ main {
 }
 
 
-/* =========================================
-   PROJECTEN HEADER
-   ========================================= */
+/* header van project*/
 
 .project-header {
     margin: 0;
@@ -114,9 +102,7 @@ main {
 }
 
 
-/* =========================================
-   PROJECTEN STUDIEJAREN
-   ========================================= */
+/*project studiejaren*/
 
 .project-year {
     background-color: transparent;
@@ -132,9 +118,7 @@ main {
 }
 
 
-/* =========================================
-   PROJECT GRID
-   ========================================= */
+/* project grid*/
 
 .project-grid {
     display: grid;
@@ -147,9 +131,7 @@ main {
 }
 
 
-/* =========================================
-   PROJECT CARDS
-   ========================================= */
+/*project kaart */
 
 .project-year article {
     background-color: #FFFFFF;
@@ -167,9 +149,7 @@ main {
 }
 
 
-/* =========================================
-   PROJECT TITEL / SUMMARY
-   ========================================= */
+/* project summary*/
 
 .project-year summary {
     padding: 25px;
@@ -192,15 +172,7 @@ main {
     font-weight: bold;
 }
 
-
-/* Standaard pijltje van browser verwijderen */
-
-.project-year summary::-webkit-details-marker {
-    display: none;
-}
-
-
-/* Eigen pijltje */
+/*Eigen pijltje*/
 
 .project-year summary::after {
     content: "›";
@@ -221,9 +193,7 @@ main {
 }
 
 
-/* =========================================
-   PROJECT INHOUD
-   ========================================= */
+/* project inhoud */
 
 .project-content {
     padding: 0 25px 25px 25px;
@@ -238,9 +208,7 @@ main {
 }
 
 
-/* =========================================
-   WHO AM I
-   ========================================= */
+/*WHO AM I pagina */
 
 .whoami-main {
     max-width: 900px;
@@ -250,9 +218,7 @@ main {
 }
 
 
-/* =========================================
-   WHO AM I INTRO + FOTO
-   ========================================= */
+/* whoami intro en fotoje*/
 
 .whoami-header {
     padding: 0;
@@ -270,7 +236,6 @@ main {
 .whoami-header-text {
     flex: 1;
 }
-
 
 /* STUDENT • DEVELOPER • LEARNER */
 
@@ -294,7 +259,7 @@ main {
 }
 
 
-/* Introductietekst */
+/* introtekst */
 
 .whoami-intro {
     max-width: 550px;
@@ -304,9 +269,7 @@ main {
 }
 
 
-/* =========================================
-   WHO AM I FOTO
-   ========================================= */
+/* foto*/
 
 .whoami-image {
     width: 280px;
@@ -324,9 +287,7 @@ main {
 }
 
 
-/* =========================================
-   OVER MIJ
-   ========================================= */
+/* over mij */
 
 .about-section {
     background-color: transparent;
@@ -356,9 +317,7 @@ main {
 }
 
 
-/* =========================================
-   WHO AM I INFORMATIEVAK
-   ========================================= */
+/* who am i infovakje*/
 
 .about-card {
     width: 230px;
@@ -382,9 +341,7 @@ main {
 }
 
 
-/* =========================================
-   SCHEIDINGSLIJN
-   ========================================= */
+/* lijn van die scheiding */
 
 .whoami-main hr {
     border: none;
@@ -395,9 +352,7 @@ main {
 }
 
 
-/* =========================================
-   STUDIE + VAARDIGHEDEN
-   ========================================= */
+/* study en vaardigheden */
 
 .study-skills {
     background-color: transparent;
@@ -432,9 +387,7 @@ main {
 }
 
 
-/* =========================================
-   BLOG HEADER
-   ========================================= */
+/* blog header */
 
 .blog-header {
     margin: 0;
@@ -475,9 +428,7 @@ main {
 }
 
 
-/* =========================================
-   BLOG OVERZICHT
-   ========================================= */
+/* overzicht van blog */
 
 .blog-section {
     max-width: 900px;
@@ -516,9 +467,7 @@ main {
 }
 
 
-/* =========================================
-   FOOTER
-   ========================================= */
+/* footer */
 
 footer {
     background-color: #F2EDE7;
@@ -537,9 +486,7 @@ footer p {
 }
 
 
-/* =========================================
-   TABLET - MAXIMAAL 768PX
-   ========================================= */
+/* tablet, max 768PX*/
 
 @media (max-width: 768px) {
 
@@ -589,9 +536,7 @@ footer p {
 }
 
 
-/* =========================================
-   MOBIEL - MAXIMAAL 480PX
-   ========================================= */
+/*  tel, max 480PX */
 
 @media (max-width: 480px) {
 
