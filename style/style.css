@@ -1,4 +1,4 @@
-/* hele site */
+/*hele site*/
 body {
     margin: 0;
     background-color: #FAF8F5;
@@ -7,7 +7,7 @@ body {
 }
 
 
-/* navbar */
+/*navbar*/
 nav {
     background-color: #F2EDE7;
     padding: 25px 20px;
@@ -39,9 +39,7 @@ nav a.active {
 
 /*algemene tekst*/
 
-h1,
-h2,
-h3,
+h1,h2,h3,
 p {
     color: #1F2933;
 }
@@ -60,7 +58,7 @@ main {
 }
 
 
-/* header van project*/
+/*header project*/
 
 .project-header {
     margin: 0;
@@ -118,20 +116,19 @@ main {
 }
 
 
-/* project grid*/
+/*project grid*/
 
 .project-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 
-    /* Zorgt ervoor dat de kaart ernaast
-       niet meegaat wanneer een project opent */
+/*zorgt ervoor dat kaart ernaast niet meegaat als project opent*/
     align-items: start;
 }
 
 
-/*project kaart */
+/*project kaart*/
 
 .project-year article {
     background-color: #FFFFFF;
@@ -149,7 +146,7 @@ main {
 }
 
 
-/* project summary*/
+/*project summary*/
 
 .project-year summary {
     padding: 25px;
@@ -164,7 +161,7 @@ main {
 }
 
 
-/* H3 binnen de summary */
+/*H3 binnen summary*/
 
 .project-year summary h3 {
     margin: 0;
@@ -172,7 +169,7 @@ main {
     font-weight: bold;
 }
 
-/*Eigen pijltje*/
+/*pijltje*/
 
 .project-year summary::after {
     content: "›";
@@ -186,14 +183,14 @@ main {
 }
 
 
-/* Pijltje draaien wanneer project open is */
+/*pijltje draait*/
 
 .project-year details[open] summary::after {
     transform: rotate(90deg);
 }
 
 
-/* project inhoud */
+/*project inhoud*/
 
 .project-content {
     padding: 0 25px 25px 25px;
@@ -208,7 +205,7 @@ main {
 }
 
 
-/*WHO AM I pagina */
+/*whoami page*/
 
 .whoami-main {
     max-width: 900px;
@@ -218,7 +215,7 @@ main {
 }
 
 
-/* whoami intro en fotoje*/
+/*whoami intro en fotoje*/
 
 .whoami-header {
     padding: 0;
@@ -237,7 +234,7 @@ main {
     flex: 1;
 }
 
-/* STUDENT • DEVELOPER • LEARNER */
+/*STUDENT • DEVELOPER • LEARNER*/
 
 .whoami-label {
     color: #8A4357;
@@ -250,7 +247,7 @@ main {
 }
 
 
-/* Hiii, ik ben Lola */
+/*Hiii, ik ben Lola stukje*/
 
 .whoami-header h1 {
     font-size: 55px;
@@ -259,7 +256,7 @@ main {
 }
 
 
-/* introtekst */
+/*introtekst*/
 
 .whoami-intro {
     max-width: 550px;
@@ -269,7 +266,7 @@ main {
 }
 
 
-/* foto*/
+/*fototje*/
 
 .whoami-image {
     width: 280px;
@@ -287,7 +284,7 @@ main {
 }
 
 
-/* over mij */
+/*over mij*/
 
 .about-section {
     background-color: transparent;
@@ -317,7 +314,7 @@ main {
 }
 
 
-/* who am i infovakje*/
+/*whoami infovakje*/
 
 .about-card {
     width: 230px;
@@ -329,19 +326,25 @@ main {
     border-radius: 15px;
 }
 
-.about-card p {
+.about-card dl {
+    margin: 0;
+}
+
+.about-card dt {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.about-card dt:first-child {
     margin-top: 0;
-    margin-bottom: 20px;
-
-    line-height: 1.5;
 }
 
-.about-card p:last-child {
-    margin-bottom: 0;
+.about-card dd {
+    margin: 5px 0 0 0;
 }
 
 
-/* lijn van die scheiding */
+/*scheidinglijn*/
 
 .whoami-main hr {
     border: none;
@@ -352,7 +355,7 @@ main {
 }
 
 
-/* study en vaardigheden */
+/*study en vaardigheden*/
 
 .study-skills {
     background-color: transparent;
@@ -467,7 +470,7 @@ main {
 }
 
 
-/* footer */
+/*footer*/
 
 footer {
     background-color: #F2EDE7;
@@ -486,11 +489,11 @@ footer p {
 }
 
 
-/* tablet, max 768PX*/
+/*tablet, max 768PX*/
 
 @media (max-width: 768px) {
 
-    /* Projecten */
+    /*projecten*/
 
     .project-header {
         padding: 50px 30px;
@@ -501,7 +504,7 @@ footer p {
     }
 
 
-    /* Who Am I */
+    /*whoami*/
 
     .whoami-header {
         gap: 40px;
@@ -524,7 +527,7 @@ footer p {
     }
 
 
-    /* Blog */
+    /*blog*/
 
     .blog-header {
         padding: 50px 30px;
@@ -536,11 +539,11 @@ footer p {
 }
 
 
-/*  tel, max 480PX */
+/*tel, max 480PX*/
 
 @media (max-width: 480px) {
 
-    /* Navbar */
+    /*navbar*/
 
     nav {
         gap: 20px;
@@ -552,14 +555,14 @@ footer p {
     }
 
 
-    /* Algemene main */
+    /*main*/
 
     main {
         padding: 20px;
     }
 
 
-    /* Projecten */
+    /*prjecten*/
 
     .project-header {
         padding: 45px 25px;
@@ -584,7 +587,7 @@ footer p {
     }
 
 
-    /* Who Am I */
+    /*whoami*/
 
     .whoami-main {
         padding: 50px 25px;
@@ -612,7 +615,7 @@ footer p {
     }
 
 
-    /* Over mij */
+    /*over mij*/
 
     .about-section {
         display: block;
@@ -625,7 +628,7 @@ footer p {
     }
 
 
-    /* Studie en vaardigheden */
+    /*study en vaardigheden*/
 
     .study-skills {
         display: block;
@@ -636,7 +639,7 @@ footer p {
     }
 
 
-    /* Blog */
+    /*blog*/
 
     .blog-header {
         padding: 45px 25px;
