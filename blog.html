@@ -1,23 +1,70 @@
-<html>
+<!DOCTYPE html>
+<html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
 
-    <header>
-        <h1>Blog</h1>
+    <nav>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="index.html">Wie ben ik?</a>
+        <a href="projecten.html">Projecten</a>
+    </nav>
+
+
+    <header class="blog-header">
+
+        <div class="blog-header-text">
+
+            <p class="blog-label">MIJN BLOG</p>
+
+            <h1>Blog</h1>
+
+            <p class="blog-description">
+                Hier deel ik wat ik leer tijdens mijn studie en mijn ontwikkeling binnen deze studie.
+            </p>
+
+        </div>
+
     </header>
+
 
     <main>
 
-        <section>
-            <h2>Welkom op mijn blog!</h2>
-            <p>Hier deel ik mijn gedachtes en ervaringen.</p>
+        <section class="blog-section">
+
+            <h2>Mijn blogs</h2>
+
+<!--groepeert blogs zodat ik  met css naast elkaar kan zetten-->         
+            <div class="blog-grid">
+
+                <!--losse blogartikel-->   
+                <article class="blog-card">
+                    <h3>Artikel 1</h3>
+                    <p> Lorem ipsum dolor sit amet. Et impedit aliquam qui accusamus iure nam dignissimos fuga aut nemo laboriosam quo fuga debitis. Est harum ducimus qui alias molestiae ea quis consectetur At delectus inventore et fugiat voluptatum. Et fugit dolor quo ullam quam vel commodi excepturi non quia voluptas et dolores voluptatum ut quod nisi est tenetur vero!</p>
+                </article>
+
+                <article class="blog-card">
+                    <h3>Artikel 2</h3>
+                    <p> Lorem ipsum dolor sit amet. Et impedit aliquam qui accusamus iure nam dignissimos fuga aut nemo laboriosam quo fuga debitis. Est harum ducimus qui alias molestiae ea quis consectetur At delectus inventore et fugiat voluptatum. Et fugit dolor quo ullam quam vel commodi excepturi non quia voluptas et dolores voluptatum ut quod nisi est tenetur vero!</p>
+                </article>
+
+            </div>
+
         </section>
 
     </main>
 
+
+    <footer>
+        <p>Gemaakt door Lola Lin - 2026</p>
+    </footer>
+
 </body>
+
 </html>
