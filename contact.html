@@ -10,6 +10,7 @@
 
 <body>
 
+    <!-- navigatie -->
     <nav>
         <a href="blog.html">Blog</a>
         <a href="index.html">Wie ben ik?</a>
@@ -17,84 +18,107 @@
         <a href="contact.html" class="active">Contact</a>
     </nav>
 
-        <main>
 
-    <section class="contact-section">
+    <main>
 
-        <h1>Contact</h1>
+        <!-- contactformulier -->
+        <section class="contact-section">
 
-        <p>
-            Wil je contact met mij opnemen? Vul dan het formulier hieronder in.
-        </p>
+            <h1>Contact</h1>
 
-        <form id="contact-form" novalidate>
-
-            <fieldset>
-
-                <legend>Contactformulier</legend>
-
-                <div class="form-group">
-                    <label for="naam">Naam (verplicht)</label>
-                    <input
-                        type="text"
-                        id="naam"
-                        name="naam"
-                        autocomplete="name"
-                        aria-describedby="naam-fout"
-                        required
-                    >
-
-                    <p id="naam-fout" class="foutmelding"></p>
-
-                </div>
-
-                <div class="form-group">
-                    <label for="email">E-mailadres (verplicht)</label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        autocomplete="email"
-                        aria-describedby="email-fout"
-                        required
-                    >
-
-                    <p id="email-fout" class="foutmelding"></p>
-                </div>
+            <p>
+                Wil je contact met mij opnemen? Vul dan het formulier hieronder in.
+            </p>
 
 
-                <div class="form-group">
-                    <label for="bericht">Bericht (verplicht)</label>
+            <!-- formulier -->
+            <form id="contact-form" novalidate>
 
-                    <textarea
-                        id="bericht"
-                        name="bericht"
-                        minlength="10"
-                        aria-describedby="bericht-fout"
-                        required
-                    ></textarea>
+                <fieldset>
 
-                    <p id="bericht-fout" class="foutmelding"></p>
-                </div>
+                    <legend>Contactformulier</legend>
 
-            </fieldset>
 
-            <button type="submit">Versturen</button>
+                    <!-- naam -->
+                    <div class="form-group">
 
-        </form>
-        
-        <p id="succesmelding" aria-live="polite"></p>
+                        <label for="naam">Naam (verplicht)</label>
 
-    </section>
+                        <input
+                            type="text"
+                            id="naam"
+                            name="naam"
+                            autocomplete="name"
+                            aria-describedby="naam-fout"
+                            required
+                        >
+
+                        <p id="naam-fout" class="foutmelding"></p>
+
+                    </div>
+
+
+                    <!-- email -->
+                    <div class="form-group">
+
+                        <label for="email">E-mailadres (verplicht)</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="email"
+                            aria-describedby="email-fout"
+                            required
+                        >
+
+                        <p id="email-fout" class="foutmelding"></p>
+
+                    </div>
+
+
+                    <!-- bericht -->
+                    <div class="form-group">
+
+                        <label for="bericht">Bericht (verplicht)</label>
+
+                        <textarea
+                            id="bericht"
+                            name="bericht"
+                            minlength="10"
+                            aria-describedby="bericht-fout"
+                            required
+                        ></textarea>
+
+                        <p id="bericht-fout" class="foutmelding"></p>
+
+                    </div>
+
+                </fieldset>
+
+
+                <!-- formulier versturen -->
+                <button type="submit">Versturen</button>
+
+            </form>
+
+
+            <!-- succesmelding -->
+            <p id="succesmelding" aria-live="polite"></p>
+
+        </section>
 
     </main>
 
+
+    <!-- footer -->
     <footer>
         <p>Gemaakt door Lola Lin - 2026</p>
     </footer>
 
-<script src="js/contact.js"></script>
+
+    <!-- JS voor de formuliervalidatie -->
+    <script src="js/contact.js"></script>
 
 </body>
 

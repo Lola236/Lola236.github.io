@@ -1,3 +1,4 @@
+//alle projecten
 const projecten = [
     {
         titel: "SmartKas",
@@ -56,85 +57,96 @@ const projecten = [
 ];
 
 
-//containers van projecten
+//plekken uit html ophalen waar de projecten komen te staan
 const jaar1Container = document.querySelector("#projecten-jaar1");
 const jaar2Container = document.querySelector("#projecten-jaar2");
 
 
-//filterknoppen
+//3 filterknoppen uit de html ophalen
+//deze knoppen kan gebruiker kiezen welke projecten worden getoond
 const filterAlles = document.querySelector("#filter-alles");
 const filterJaar1 = document.querySelector("#filter-jaar1");
 const filterJaar2 = document.querySelector("#filter-jaar2");
 const filterKnoppen = document.querySelectorAll(".project-filter button");
 
 
-//sections van studiejaren
+//2sections voor jaar 1 en jaar 2 uit de html ophalen
 const jaar1Section = document.querySelector("#jaar1");
 const jaar2Section = document.querySelector("#jaar2");
 
 
-//projecten maken
+//door alle projecten uit de array heen gaan
+//ieder project  nieuwe html element gemaakt
 projecten.forEach((project) => {
 
+    //html elementen voor project maken
     const article = document.createElement("article");
     const projectKnop = document.createElement("button");
     const titel = document.createElement("h3");
     const projectContent = document.createElement("div");
 
 
-    //classes toevoegen
+    //classestoevoegen zodatelementen juiste css krijgt
     projectKnop.classList.add("project-toggle");
     projectContent.classList.add("project-content");
     projectContent.classList.add("verborgen");
 
 
-    //titel
+    //titel van project in h3 zetten.
     titel.textContent = project.titel;
 
 
-    //beschrijving
+    //door alle stukken van de beschrijving heen gaan
+    //ieder stuk tekst wordt nieuwe paragraaf gemaakt
     project.beschrijving.forEach((tekst) => {
 
         const paragraaf = document.createElement("p");
 
+        //beschrijving in paragraaf zetten
         paragraaf.textContent = tekst;
 
+        //paragraaf toevoegen aan inhoud van project
         projectContent.appendChild(paragraaf);
     });
 
 
-    //technieken
+    //paragraaf maken waarin de gebruikte technieken komen
     const technieken = document.createElement("p");
     technieken.classList.add("techniques");
 
+    // "technieken:" dikgedrukt
     const techniekenTitel = document.createElement("strong");
     techniekenTitel.textContent = "Technieken:";
 
+    //titel nieuwe regel en technieken toevoegen
     technieken.appendChild(techniekenTitel);
     technieken.appendChild(document.createElement("br"));
     technieken.appendChild(document.createTextNode(project.technieken));
 
+    //technieken toevoegen aan inhoud van project
     projectContent.appendChild(technieken);
 
 
-    //project opbouwen
+    //alle gemaakte onderdelen samenvoegen tot 1 project
     projectKnop.appendChild(titel);
 
     article.appendChild(projectKnop);
     article.appendChild(projectContent);
 
 
-    //project openen en sluiten
+    //als gebruiker op project klikt wordt de inhoud geopend of dicht
     projectKnop.addEventListener("click", () => {
 
+        //class verborgen toevoegen of weghalen
         projectContent.classList.toggle("verborgen");
 
-        //pijltje draait
+        //class open toevoegen of weghalen zodat pijltje draait
         projectKnop.classList.toggle("open");
     });
 
 
-    //project bij juiste studiejaar plaatsen
+    //controleren bij welk studiejaar project hoort
+    //daarna wordt project bij jaar 1 of 2 op pagina gezet
     if (project.studiejaar === 1) {
 
         jaar1Container.appendChild(article);
@@ -146,7 +158,7 @@ projecten.forEach((project) => {
 });
 
 
-//filter: eerste jaar
+//als gebruiker op 1e jaar klikt wordt alleen de section van jaar 1 getoond
 filterJaar1.addEventListener("click", () => {
 
     jaar1Section.style.display = "block";
@@ -154,7 +166,7 @@ filterJaar1.addEventListener("click", () => {
 });
 
 
-//filter: tweede jaar
+//als gebruiker op 2e jaar klikt, wordt alleen de section van jaar 2 getoond
 filterJaar2.addEventListener("click", () => {
 
     jaar1Section.style.display = "none";
@@ -162,7 +174,7 @@ filterJaar2.addEventListener("click", () => {
 });
 
 
-//filter: alles
+//als gebruiker op Alles klikt, word allebei getoond
 filterAlles.addEventListener("click", () => {
 
     jaar1Section.style.display = "block";
@@ -170,15 +182,17 @@ filterAlles.addEventListener("click", () => {
 });
 
 
-//actieve filterknop veranderen
+//bij alle filterknoppen controleren wanneer erop wordt geklikt
 filterKnoppen.forEach((knop) => {
 
     knop.addEventListener("click", () => {
 
+        //eerst de actieve class bij alle knoppen weghalen
         filterKnoppen.forEach((andereKnop) => {
             andereKnop.classList.remove("active-filter");
         });
 
+        //daarna de actieve class toevoegen aan knop waarop is geklikt
         knop.classList.add("active-filter");
     });
 });
