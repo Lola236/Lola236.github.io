@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <!-- navigatie -->
+    <nav>
+        <a href="blog.html">Blog</a>
+        <a href="index.html">Wie ben ik?</a>
+        <a href="projecten.html">Projecten</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+
+    <main>
+
+        <!-- contactformulier -->
+        <section class="contact-section">
+
+            <h1>Contact</h1>
+
+            <p>
+                Wil je contact met mij opnemen? Vul dan het formulier hieronder in.
+            </p>
+
+
+            <!-- formulier -->
+            <form id="contact-form" novalidate>
+
+                <fieldset>
+
+                    <legend>Contactformulier</legend>
+
+
+                    <!-- naam -->
+                    <div class="form-group">
+
+                        <label for="naam">Naam (verplicht)</label>
+
+                        <input
+                            type="text"
+                            id="naam"
+                            name="naam"
+                            autocomplete="name"
+                            aria-describedby="naam-fout"
+                            required
+                        >
+
+                        <p id="naam-fout" class="foutmelding"></p>
+
+                    </div>
+
+
+                    <!-- email -->
+                    <div class="form-group">
+
+                        <label for="email">E-mailadres (verplicht)</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="email"
+                            aria-describedby="email-fout"
+                            required
+                        >
+
+                        <p id="email-fout" class="foutmelding"></p>
+
+                    </div>
+
+
+                    <!-- bericht -->
+                    <div class="form-group">
+
+                        <label for="bericht">Bericht (verplicht)</label>
+
+                        <textarea
+                            id="bericht"
+                            name="bericht"
+                            minlength="10"
+                            aria-describedby="bericht-fout"
+                            required
+                        ></textarea>
+
+                        <p id="bericht-fout" class="foutmelding"></p>
+
+                    </div>
+
+                </fieldset>
+
+
+                <!-- formulier versturen -->
+                <button type="submit">Versturen</button>
+
+            </form>
+
+
+            <!-- succesmelding -->
+            <p id="succesmelding" aria-live="polite"></p>
+
+        </section>
+
+    </main>
+
+
+    <!-- footer -->
+    <footer>
+        <p>Gemaakt door Lola Lin - 2026</p>
+    </footer>
+
+
+    <!-- JS voor de formuliervalidatie -->
+    <script src="js/contact.js"></script>
+
+</body>
+
+</html>

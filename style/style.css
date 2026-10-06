@@ -1,4 +1,5 @@
 /*hele site*/
+
 body {
     margin: 0;
     background-color: #FAF8F5;
@@ -8,6 +9,7 @@ body {
 
 
 /*navbar*/
+
 nav {
     background-color: #F2EDE7;
     padding: 25px 20px;
@@ -39,7 +41,9 @@ nav a.active {
 
 /*algemene tekst*/
 
-h1,h2,h3,
+h1,
+h2,
+h3,
 p {
     color: #1F2933;
 }
@@ -100,6 +104,40 @@ main {
 }
 
 
+/*project filter*/
+
+.project-filter {
+    max-width: 900px;
+    margin: 40px auto 0;
+
+    display: flex;
+    gap: 15px;
+}
+
+.project-filter button {
+    background-color: #FFFFFF;
+    color: #1F2933;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 12px 20px;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.project-filter button:hover {
+    background-color: #F4DEDF;
+    color: #8A4357;
+}
+
+.project-filter button.active-filter {
+    background-color: #8A4357;
+    color: #FFFFFF;
+}
+
+
 /*project studiejaren*/
 
 .project-year {
@@ -123,7 +161,7 @@ main {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 
-/*zorgt ervoor dat kaart ernaast niet meegaat als project opent*/
+    /*zorgt ervoor dat kaart ernaast niet meegaat als project opent*/
     align-items: start;
 }
 
@@ -136,8 +174,6 @@ main {
     border-radius: 12px;
     overflow: hidden;
 
-    min-height: 150px;
-
     transition: 0.2s;
 }
 
@@ -146,10 +182,14 @@ main {
 }
 
 
-/*project summary*/
+/*project knop*/
 
-.project-year summary {
+.project-toggle {
+    width: 100%;
     padding: 25px;
+
+    background-color: transparent;
+    border: none;
 
     cursor: pointer;
 
@@ -157,35 +197,38 @@ main {
     justify-content: space-between;
     align-items: center;
 
-    list-style: none;
+    text-align: left;
 }
 
 
-/*H3 binnen summary*/
+/*H3 binnen project knop*/
 
-.project-year summary h3 {
+.project-toggle h3 {
     margin: 0;
     font-size: 22px;
     font-weight: bold;
 }
 
+
 /*pijltje*/
 
-.project-year summary::after {
+.project-toggle::after {
     content: "›";
+
+    display: inline-block;
 
     font-size: 30px;
     font-weight: normal;
 
     margin-left: 15px;
 
-    transition: 0.2s;
+    transition: transform 0.2s;
 }
 
 
-/*pijltje draait*/
+/*pijltje draait wanneer project open is*/
 
-.project-year details[open] summary::after {
+.project-toggle.open::after {
     transform: rotate(90deg);
 }
 
@@ -194,6 +237,10 @@ main {
 
 .project-content {
     padding: 0 25px 25px 25px;
+}
+
+.verborgen {
+    display: none;
 }
 
 .project-content p {
@@ -233,6 +280,7 @@ main {
 .whoami-header-text {
     flex: 1;
 }
+
 
 /*STUDENT • DEVELOPER • LEARNER*/
 
@@ -344,6 +392,35 @@ main {
 }
 
 
+/*weer API*/
+
+.weather-info {
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid #C9C1BA;
+}
+
+.weather-info dt {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.weather-info #api-data {
+    margin-top: 5px;
+
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.weather-info #api-data p {
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: normal;
+}
+
+
 /*scheidinglijn*/
 
 .whoami-main hr {
@@ -390,7 +467,7 @@ main {
 }
 
 
-/* blog header */
+/*blog header*/
 
 .blog-header {
     margin: 0;
@@ -431,7 +508,7 @@ main {
 }
 
 
-/* overzicht van blog */
+/*overzicht van blog*/
 
 .blog-section {
     max-width: 900px;
@@ -539,6 +616,114 @@ footer p {
 }
 
 
+/*contact page*/
+
+.contact-section {
+    max-width: 700px;
+    margin: 60px auto;
+}
+
+.contact-section h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.contact-section > p {
+    margin-bottom: 35px;
+}
+
+
+/*contact formulier*/
+
+#contact-form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#contact-form legend {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px;
+
+    border: 1px solid #C9C1BA;
+    border-radius: 8px;
+
+    background-color: #FFFFFF;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+
+/*foutmeldingen*/
+
+.foutmelding {
+    color: #B42318;
+    font-size: 14px;
+    margin: 6px 0 0 0;
+}
+
+
+/*ongeldig veld*/
+
+.form-group input[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+    border-color: #B42318;
+}
+
+
+/*versturen knop*/
+
+#contact-form button {
+    background-color: #8A4357;
+    color: #FFFFFF;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 12px 22px;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #6F3546;
+}
+
+
+/*succesmelding*/
+
+#succesmelding {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
 /*tel, max 480PX*/
 
 @media (max-width: 480px) {
@@ -562,7 +747,7 @@ footer p {
     }
 
 
-    /*prjecten*/
+    /*projecten*/
 
     .project-header {
         padding: 45px 25px;
@@ -584,6 +769,10 @@ footer p {
 
     .project-year {
         margin: 40px auto;
+    }
+
+    .project-filter {
+        flex-wrap: wrap;
     }
 
 
