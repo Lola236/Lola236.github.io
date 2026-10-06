@@ -10,13 +10,14 @@
 
 <body>
 
-<header>
-    <nav>
-        <a href="blog.html">Blog</a>
-        <a href="index.html" class="active">Wie ben ik?</a>
-        <a href="projecten.html">Projecten</a>
-    </nav>
-</header>
+    <header>
+        <nav>
+            <a href="blog.html">Blog</a>
+            <a href="index.html" class="active">Wie ben ik?</a>
+            <a href="projecten.html">Projecten</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
     <main class="whoami-main">
 
@@ -40,16 +41,17 @@
             </div>
 
 
-            <!--fototje-->
+            <!-- fototje -->
 
             <div class="whoami-image">
-                <img src="imgs/mijnfoto.jpeg" alt="Foto van Lola tijdens haar reis in Shanghai, met de Shanghai Tower op de achtergrond">
+                <img src="imgs/mijnfoto.jpeg"
+                    alt="Foto van Lola tijdens haar reis in Shanghai, met de Shanghai Tower op de achtergrond">
             </div>
 
         </header>
 
 
-        <!--over mij-->
+        <!-- over mij -->
 
         <section class="about-section">
 
@@ -74,31 +76,44 @@
             </div>
 
 
-            <!--kopje van info-->
+            <!-- info -->
 
-        <aside class="about-card">
-            <dl>
-                <dt>Locatie</dt>
-                <dd>Rotterdam</dd>
+            <aside class="about-card">
 
-                <dt>Opleiding</dt>
-                <dd>HBO-ICT</dd>
+                <dl>
 
-                <dt>Richting</dt>
-                <dd>Software Engineering</dd>
+                    <dt>Locatie</dt>
+                    <dd>Rotterdam</dd>
 
-                <dt>Interesses</dt>
-                <dd>Gamen • Bakken • Reizen</dd>
-            </dl>
-     </aside>
+                    <dt>Opleiding</dt>
+                    <dd>HBO-ICT</dd>
+
+                    <dt>Richting</dt>
+                    <dd>Software Engineering</dd>
+
+                    <dt>Interesses</dt>
+                    <dd>Gamen • Bakken • Reizen</dd>
+
+                    <!-- weer API -->
+
+                    <div class="weather-info">
+                        <dt>Rotterdam vandaag</dt>
+                        <dd id="api-data">Gegevens laden...</dd>
+                    </div>
+
+                </dl>
+
+            </aside>
 
         </section>
 
-       <!--scheidingslijn-->
+
+        <!-- scheidingslijn -->
+
         <hr>
 
 
-        <!--mn studie en vaardigheden-->
+        <!-- mijn studie en vaardigheden -->
 
         <section class="study-skills">
 
@@ -145,6 +160,9 @@
     <footer>
         <p>Gemaakt door Lola Lin - 2026</p>
     </footer>
+
+
+    <script src="js/api.js"></script>
 
 </body>
 
