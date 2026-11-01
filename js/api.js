@@ -2,25 +2,26 @@ const url = "https://api.open-meteo.com/v1/forecast?latitude=51.924&longitude=4.
 //const url = "https://api.open-meteo.com/v1/fout?latitude=51.924&longitude=4.478&hourly=temperature_2m&models=knmi_seamless&timezone=auto&forecast_days=1";
 
 
-//temperatuur op website gezet
+//selecteert html element waarin de API gegevens worden getoond
 const apiData = document.querySelector("#api-data");
 
 
 //temperatuur word op pagina getoond
 function toonTemperatuur(temperatuur, eenheid) {
 
-    //nieuw p-element maken
+    //nieuwe html element maken
     const temperatuurTekst = document.createElement("p");
 
     //temperatuur en eenheid in p-element zetten
+    //temperatuur als tekst erin zetten
     temperatuurTekst.textContent = temperatuur + " " + eenheid;
 
-    // p-element op de pagina zetten
+    // html element op de pagina zetten
     apiData.appendChild(temperatuurTekst);
 }
 
 
-//laadmelding laten zien
+//laat zien dat de gegevens worden geladen
 function toonLaadstatus() {
     apiData.textContent = "Gegevens laden...";
 }
@@ -35,12 +36,12 @@ function toonFoutmelding() {
 //gegevens ophalen van de API
 async function haalDataOp() {
 
-    //eerst de laadmelding laten zien
+    //voert laadmelding uit
     toonLaadstatus();
 
     try {
 
-        //gegevens ophalen met fetch
+        //gegevens ophalen met fetch van api
         const response = await fetch(url);
 
 
@@ -68,7 +69,7 @@ async function haalDataOp() {
         apiData.textContent = "";
 
 
-        //temperatuur laten zien
+        //temperatuur op pagina laten zien
         toonTemperatuur(temperatuur, eenheid);
 
     } catch (error) {

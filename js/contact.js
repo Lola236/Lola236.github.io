@@ -1,7 +1,9 @@
-//contactformulier en invoervelden uit html ophalen
+//contactformulier en invoervelden selecteren uit html
 const contactForm = document.querySelector("#contact-form");
 
 const naam = document.querySelector("#naam");
+//zoekt plek waar je foutmelding wilt tonen
+//element waarin de foutmelding komt
 const naamFout = document.querySelector("#naam-fout");
 
 const email = document.querySelector("#email");
@@ -14,7 +16,7 @@ const berichtFout = document.querySelector("#bericht-fout");
 const succesmelding = document.querySelector("#succesmelding");
 
 
-//uitgevoerd als  gebruiker op versturen klikt
+//uitgevoerd als gebruiker op versturen klikt
 contactForm.addEventListener("submit", (event) => {
 
     //voorkomt dat formulier meteen wordt verstuurd eerst controleren of alles goed is ingevuld
@@ -23,6 +25,7 @@ contactForm.addEventListener("submit", (event) => {
 
     //naam controleren
     //als veld leeg is, wordt er foutmelding getoond
+    //aria-invalid="true" geeft voor toegankelijkheid aan dat invoerveld ongeldig is
     if (naam.value.trim() === "") {
         naamFout.textContent = "Vul je naam in.";
         naam.setAttribute("aria-invalid", "true");

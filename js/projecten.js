@@ -57,12 +57,12 @@ const projecten = [
 ];
 
 
-//plekken uit html ophalen waar de projecten komen te staan
+//bestaand html element zoeken
 const jaar1Container = document.querySelector("#projecten-jaar1");
 const jaar2Container = document.querySelector("#projecten-jaar2");
 
 
-//3 filterknoppen uit de html ophalen
+//3 filterknoppen uit de html slecteren
 //deze knoppen kan gebruiker kiezen welke projecten worden getoond
 const filterAlles = document.querySelector("#filter-alles");
 const filterJaar1 = document.querySelector("#filter-jaar1");
@@ -70,7 +70,7 @@ const filterJaar2 = document.querySelector("#filter-jaar2");
 const filterKnoppen = document.querySelectorAll(".project-filter button");
 
 
-//2sections voor jaar 1 en jaar 2 uit de html ophalen
+//2sections voor jaar 1 en jaar 2 uit de html selecteren
 const jaar1Section = document.querySelector("#jaar1");
 const jaar2Section = document.querySelector("#jaar2");
 
@@ -79,7 +79,7 @@ const jaar2Section = document.querySelector("#jaar2");
 //ieder project  nieuwe html element gemaakt
 projecten.forEach((project) => {
 
-    //html elementen voor project maken
+    //html elementen voor project maken met JS
     const article = document.createElement("article");
     const projectKnop = document.createElement("button");
     const titel = document.createElement("h3");
@@ -97,9 +97,9 @@ projecten.forEach((project) => {
 
 
     //door alle stukken van de beschrijving heen gaan
-    //ieder stuk tekst wordt nieuwe paragraaf gemaakt
     project.beschrijving.forEach((tekst) => {
 
+        //ieder stuk tekst wordt nieuwe paragraaf gemaakt
         const paragraaf = document.createElement("p");
 
         //beschrijving in paragraaf zetten
@@ -114,7 +114,7 @@ projecten.forEach((project) => {
     const technieken = document.createElement("p");
     technieken.classList.add("techniques");
 
-    // "technieken:" dikgedrukt
+    //"technieken:" dikgedrukt
     const techniekenTitel = document.createElement("strong");
     techniekenTitel.textContent = "Technieken:";
 
@@ -174,7 +174,7 @@ filterJaar2.addEventListener("click", () => {
 });
 
 
-//als gebruiker op Alles klikt, word allebei getoond
+//als gebruiker op alles klikt, word allebei getoond
 filterAlles.addEventListener("click", () => {
 
     jaar1Section.style.display = "block";
@@ -182,6 +182,7 @@ filterAlles.addEventListener("click", () => {
 });
 
 
+//gaat door alle drie filterknoppen
 //bij alle filterknoppen controleren wanneer erop wordt geklikt
 filterKnoppen.forEach((knop) => {
 
