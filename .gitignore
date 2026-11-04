@@ -1,0 +1,18 @@
+# .NET buildbestanden
+**/bin/
+**/obj/
+
+# Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Lokale instellingen en geheimen
+**/appsettings.Local.json
+**/appsettings.*.Local.json
+
+# Lokale databasebestanden
+*.db
+*.db-shm
+*.db-wal
