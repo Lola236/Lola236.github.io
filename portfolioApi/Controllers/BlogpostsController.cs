@@ -4,6 +4,7 @@ using portfolioApi.Services;
 
 namespace portfolioApi.Controllers;
 
+//geeft aan dat dit een API controller is, validatie van binnenkomende requests wordt automatisch uitgevoerd (400)
 [ApiController]
 //alle routes van deze controller beginnen met api/blogposts
 [Route("api/blogposts")]
@@ -14,6 +15,7 @@ public class BlogpostsController : ControllerBase
 {
     //bewaart de service die de controller gebruikt
     //private readonly: na aanmaken kan niet zmr veranderen
+    //blogpostservice ontvangen via DI!!!
     private readonly BlogpostService _blogpostService;
 
     //krijgt de blogpostservice automatisch via dependency injection

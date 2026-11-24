@@ -3,7 +3,7 @@ using portfolioApi.DTOs;
 using portfolioApi.Services;
 
 namespace portfolioApi.Controllers;
-
+//geeft aan dat dit een API controller is, validatie van binnenkomende requests wordt automatisch uitgevoerd (400)
 [ApiController]
 //alle routes van deze controller beginnen met api/projects
 [Route("api/projects")]
@@ -14,9 +14,10 @@ public class ProjectsController : ControllerBase
 {
     //bewaart de service die de controller gebruikt
     //private readonly: na aanmaken kan niet zmr veranderen
+    //projectservice ontvangen via DI!!!
     private readonly ProjectService _projectService;
 
-//krijgt de projectservice automatisch via dependency injection
+    //krijgt de projectservice automatisch via dependency injection
     public ProjectsController(ProjectService projectService)
     {
         _projectService = projectService;
