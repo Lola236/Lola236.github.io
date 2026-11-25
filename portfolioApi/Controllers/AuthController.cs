@@ -25,7 +25,7 @@ public class AuthController : ControllerBase
     [HttpPost("register")]
     public async Task<IActionResult> Register(RegisterDto dto)
     {
-        //maakt een nieuwe gebruiker aan
+        //maakt een nieuwe gebruiker aan!
         var user = new User
         {
             UserName = dto.Email,
@@ -42,7 +42,7 @@ public class AuthController : ControllerBase
             return BadRequest(result.Errors);
         }
 
-        //geeft de gebruiker de rol gast
+        //geeft de gebruiker de rol gast!!
         var roleResult = await _userManager.AddToRoleAsync(
             user, "Gast");
 

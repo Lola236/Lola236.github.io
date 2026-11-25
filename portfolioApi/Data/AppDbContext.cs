@@ -9,7 +9,7 @@ public class AppDbContext : IdentityDbContext<User>
 {
     //ontvangt db instellingen via DI
     public AppDbContext(DbContextOptions<AppDbContext> options)
-        : base(options) //geeft instellingen door aan DbContext
+        : base(options) //geeft instellingen door aan dbcontext
     {
     }
 
