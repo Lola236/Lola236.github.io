@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using portfolioApi.DTOs;
 using portfolioApi.Services;
 
@@ -16,7 +17,7 @@ public class ProjectsController : ControllerBase
     //private readonly: na aanmaken kan niet zmr veranderen
     private readonly ProjectService _projectService;
 
-//krijgt de projectservice automatisch via dependency injection
+    //krijgt de projectservice automatisch via dependency injection
     public ProjectsController(ProjectService projectService)
     {
         _projectService = projectService;
@@ -49,11 +50,13 @@ public class ProjectsController : ControllerBase
             //geeft 404 terug
             return NotFound();
         }
+
         //geeft 200 terug met gevonden project
         return Ok(project);
     }
 
     //POST:nieuw project toevoegen
+    [Authorize(Policy = "CanEditPortfolio")]
     [HttpPost]
 
     //ontvangt projectgegevens en voegt nieuw project toe via service en stuurt projectreaddto terug met statuscode 201 (Created)
@@ -70,6 +73,7 @@ public class ProjectsController : ControllerBase
     }
 
     //PUT:bestaand project wijzigen
+    [Authorize(Policy = "CanEditPortfolio")]
     [HttpPut("{id}")]
 
     //ontvang id en nieuwe projectgegevens en wijzigt project via service en stuurt statuscode 204 (No Content) terug
@@ -86,11 +90,13 @@ public class ProjectsController : ControllerBase
             //404 teruggeven als project niet bestaat
             return NotFound();
         }
+
         //204 teruggeven als project is aangepast
         return NoContent();
     }
 
     //DELETE: Project verwijderen
+    [Authorize(Policy = "CanEditPortfolio")]
     [HttpDelete("{id}")]
 
     //ontvangt id en verwijdert project via service en stuurt statuscode 204 (No Content) terug
@@ -106,6 +112,7 @@ public class ProjectsController : ControllerBase
             //404 teruggeven als project niet bestaat
             return NotFound();
         }
+
         //204 teruggeven als project is verwijderd
         return NoContent();
     }

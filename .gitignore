@@ -16,3 +16,8 @@
 *.db
 *.db-shm
 *.db-wal
+
+# Automatische testresultaten en coverage
+**/TestResults/
+*.trx
+coverage.cobertura.xml

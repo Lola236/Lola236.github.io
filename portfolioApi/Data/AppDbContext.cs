@@ -1,10 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using portfolioApi.Models;
 
 namespace portfolioApi.Data;
 
-//regelt communicatie met db
-public class AppDbContext : DbContext
+//regelt communicatie met db en identity
+public class AppDbContext : IdentityDbContext<User>
 {
     //ontvangt db instellingen via DI
     public AppDbContext(DbContextOptions<AppDbContext> options)
